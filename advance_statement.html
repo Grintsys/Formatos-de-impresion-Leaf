@@ -1,0 +1,98 @@
+<div>
+    <H3 style="color:#1A5276;">RECIBO DE CAJA TRANSITORIO PROVISIONAL POR HOSPITALIZACIÓN</H3>
+</div>
+<div>
+    <table>
+    	<tr>
+    	    <td>
+    	        <img src="https://gersonc.neocities.org/Logo_vector-01-80px.png">
+    	    </td>
+    		<td>
+    		    <h4>CLINICA Y HOSPITAL FERRARO, S DE R.L.</h4>
+    		    <p>12 Calle, 6 Avenida, S.E. Barrio Medina,</p>
+    		    <p>Tel: 2557-5455, San Pedro Sula, Honduras, C.A.</p>
+    		</td>
+    		<td>
+    		    <p style="margin-top:60px">
+    		        {{ doc.date_create }}
+    		    </p>
+    		</td>
+	    </tr>
+    </table>
+
+</div>
+<div id="data" style="border-style: ridge;">
+    <table>
+	<tr>
+	    <td>
+	        <p>Hemos recibido de:</p>
+	        <br>
+	        <p>No. Identidad /RTN</p>
+	    </td>
+		<td>
+		    <p>{{ doc.responsible_payment }}</p>
+		    <br>
+		    <p>{{ doc.id_rtn }}</p>
+		</td>
+    </tr>
+    </table>
+    <hr color="black" size=1 width="630"> 
+    <table>
+    	<tr>
+    	    <td>
+    	        <p>La cantidad de:</p>
+    	        <br>
+    	        <p>Son:</p>
+    	    </td>
+    		<td>
+    		    <p>{{ doc.amount }}</p>
+    		    <br>
+    		    <p>{{ doc.in_words }}</p>
+    		</td>
+	    </tr>
+    </table>
+    <hr color="black" size=1 width="630"> 
+    <table>
+    	<tr>
+    	    <td>
+    	        <p>Por Concepto de:</p>
+    	        <br>
+    	        <p>Atencion a paciente</p>
+    	        <br>
+    	        <p>Total</p>
+    	    </td>
+    		<td>
+    		    <p>DEPOSITOS POR HOSPITALIZACION</p>
+    		    <br>
+    		    <p>{{ doc.patient_statement }}</p>
+    		    <br>
+    		    <p>{{ doc.amount }}</p>
+    		    <br>
+    		    <br>
+    		</td>
+	    </tr>
+    </table>
+    <table>
+        <tr>
+            <td style="width:110px">
+                Recibi Conforme
+            </td>
+            <td>
+                <hr color="black" size=1 width="180"> 
+            </td>
+            <td style="width:140px">
+               {{ doc.cashier }}
+            </td>
+            <td>
+                <hr color="black" size=1 width="180"> 
+            </td>
+        </tr>
+    </table>
+</div>
+<div style="width:580px; margin-left:43px;">
+    <p style="color:#99A3A4;">
+        Nota: Este recibo es transitorio, con el objetivo de manejo de estimados de gastos y tener la oportunidad de
+        descuentos y negociaciones de montos de honorarios con los especialistas y así beneficiar a nuestro cliente.
+        Valido unicamente durante la hospitalización.
+    </p>
+</div>
